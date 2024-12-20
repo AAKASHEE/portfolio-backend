@@ -9,15 +9,10 @@ import Note from "./models/Note.js"; // Ensure you have the Note model imported
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 3000;
 
 // Middleware
-app.use(
-  cors({
-    origin: process.env.CORS_ORIGIN || "http://localhost:5173",
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 // Routes
